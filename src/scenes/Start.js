@@ -124,7 +124,7 @@ init() {
 
             cta.on('pointerdown', () => {
             console.log('CTA clicked');
-            window.top.location.href = 'https://siteadresin.com/web/signup?redirect=/games';
+            window.top.location.href = 'https://bidikadam.com/web/signup?redirect=/games';
             
 
             });

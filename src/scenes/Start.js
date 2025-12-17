@@ -4,7 +4,7 @@ export class Start extends Phaser.Scene {
     }
 init() {
     this.score = 0;
-    this.timeLeft = 30;
+    this.timeLeft = 5;
     this.gameOver = false;
 
     this.highScore = localStorage.getItem('highScore')
@@ -23,7 +23,7 @@ init() {
             color: '#ffffff'
         });
 
-        this.timerText = this.add.text(20, 50, 'Time: 30', {
+        this.timerText = this.add.text(20, 50, 'Time: 5', {
             fontSize: '24px',
             color: '#ffffff'
         });
@@ -113,5 +113,21 @@ init() {
         restart.on('pointerdown', () => {
             this.scene.restart();
         });
+        const cta = this.add.text(640, 550, '🏆 Üye ol, rekabete başla!', {
+            fontSize: '28px',
+            color: '#ffffff',
+            backgroundColor: '#ff6b00',
+             padding: { x: 20, y: 10 }
+            })
+            .setOrigin(0.5)
+            .setInteractive();
+
+            cta.on('pointerdown', () => {
+            console.log('CTA clicked');
+            window.top.location.href = 'https://google.com';
+            
+
+            });
+
     }
 }
